@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { registerRemoteComponents, registerSharedResources, type RemoteRoute } from "./Federation/ModernFederationManager";
 
 const apiResponse = [
+  // { name: "fraud", version: "1.0", remoteUrl: "http://localhost:3001/module.js" },
   ['app-2', 'http://localhost:3001/module.js'],
   ['app-3', 'http://localhost:3002/module.js'],
 ]

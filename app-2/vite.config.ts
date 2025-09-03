@@ -9,19 +9,16 @@ export default defineConfig({
     react(),
     tailwindcss(),
     federation({
-      name: 'app-2',
+      name: 'engine2',
       filename: 'module.js',
       exposes: {
         './Route': './src/Route.tsx',
+        './manifest': './src/manifest.ts',
       },
       shared: {
-        react: { singleton: true, requiredVersion: '^19.1.1' },
-        'react-dom': { singleton: true, requiredVersion: '^19.1.1' },
-        'react-router-dom': { singleton: true, requiredVersion: '^7.8.0' },
-        'tailwindcss': { 
-          singleton: true,
-          requiredVersion: '^4.1.11' // specify your Tailwind version
-        },
+        react: { singleton: true, requiredVersion: '^18.2.0' },
+        'react-dom': { singleton: true, requiredVersion: '^18.2.0' },
+        'react-router-dom': { singleton: true, requiredVersion: '^7.7.0' },
       },
     }),
   ],
